@@ -1,14 +1,19 @@
 {
-  "name": "tdd-calculator",
+  "name": "tdd-react-calculator",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "eslint-plugin-jest-dom": "^2.1.0",
+    "eslint-plugin-testing-library": "^3.1.0",
+    "prettier": "2.0.5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -17,7 +22,15 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "plugin:testing-library/recommended",
+      "plugin:jest-dom/recommended"
+    ],
+    "plugins": [
+      "testing-library",
+      "jest-dom"
+    ]
   },
   "browserslist": {
     "production": [
